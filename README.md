@@ -11,7 +11,18 @@
 我只能告诉你联系他们的商务合作，会有很多好处，联系QQ：764545561，可以说是逐鹿介绍的。
 
 三.加入ane到工程中：
-在项目的application-app.xml文件的android配置中，加入下面的代码：
+在项目的application-app.xml文件的android配置中，加入下面的权限和配置：
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+```
+在application节点中添加下面配置：
 ```
 <activity android:name="com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager" 
 		android:configChanges="orientation|keyboardHidden" 
